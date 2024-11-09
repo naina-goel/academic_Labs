@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  pipeline:
+    build: .
+    environment:
+      MONGO_URI: mongodb://mongodb:27017/
+      OPENAI_API_KEY: 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
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo_data:
