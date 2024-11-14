@@ -13,10 +13,10 @@ def extract_diseases_from_text(criteria_text):
     )
     try:
         response = openai.Completion.create(
-            model="text-davinci-003",  # Use 'gpt-4' if available
-            prompt=prompt,
-            max_tokens=100,
-            temperature=0.3
+            model= "gpt-4",  # Use 'gpt-4' if available
+            prompt=prompt, 
+            max_tokens=100, #limits the length of the generated response
+            temperature=0.3 #controls the randomness or creativity of the model's response
         )
         diseases = response.choices[0].text.strip()
         return [disease.strip() for disease in diseases.split(",") if disease]
