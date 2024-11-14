@@ -1,0 +1,24 @@
+# Core libraries for data processing and ETL
+pandas==1.5.3                                 # For data manipulation
+requests==2.31.0                              # For making HTTP requests to external APIs
+
+# Database connectivity libraries
+pymongo==4.10.1                               # For MongoDB connection
+psycopg2-binary==2.9.6                        # For PostgreSQL connection
+elasticsearch==8.10.1                         # For Elasticsearch connection
+
+# NLP and text processing libraries
+spacy==3.5.1                                  # For NLP processing
+nltk==3.8.1                                   # For text processing and cleaning
+textblob==0.17.1                              # For sentiment analysis and text processing
+transformers==4.35.0                          # For advanced NLP models
+
+# Parallel and distributed processing libraries
+dask==2023.8.1                                # For parallel processing in Python
+ray==2.6.1                                    # For distributed data processing
+
+# Task orchestration (optional, for managing workflow)
+apache-airflow==2.7.0                         # For scheduling and managing ETL tasks
+
+# Utilities
+python-dotenv==1.0.0                          # For managing environment variables
